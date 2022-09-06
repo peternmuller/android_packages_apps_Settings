@@ -30,6 +30,13 @@
         android:title="@string/dark_theme_main_switch_title"
         settings:controller="com.android.settings.display.darkmode.DarkModeActivationPreferenceController"/>
 
+    <co.aospa.framework.preference.SecureSettingSwitchPreference
+        android:key="berry_black_theme"
+        android:dependency="dark_ui_activated"
+        android:title="@string/berry_black_theme_title"
+        android:summary="@string/berry_black_theme_summary"
+        android:defaultValue="false" />
+
     <com.android.settingslib.widget.BannerMessagePreference
         android:key="dark_ui_location_off"
         android:title="@string/twilight_mode_location_off_dialog_message"
