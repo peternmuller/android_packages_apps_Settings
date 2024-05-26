@@ -250,6 +250,14 @@
     <string name="heads_up_summary">Show select notifications as a banner across the top of the screen</string>
     <string name="heads_up_off">Heads up is disabled globally</string>
 
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Network traffic indicator</string>
+    <string name="network_traffic_summary">Show real-time internet speed in status bar</string>
+    <string name="network_traffic_switch_title">Use network traffic indicator</string>
+    <string name="network_traffic_options_title">Options</string>
+    <string name="network_traffic_autohide_title">Auto-hide</string>
+    <string name="network_traffic_autohide_summary">Hide when speed is below 1 KB/s</string>
+
     <!-- Vibration patterns -->
     <string name="notification_vibration_pattern_title">Notification vibration pattern</string>
     <string name="ring_vibration_pattern_title">Ring vibration pattern</string>
