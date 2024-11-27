@@ -183,6 +183,13 @@
         android:defaultValue="false"
         android:order="-55"/>
 
+    <co.aospa.framework.preference.SystemSettingSwitchPreference
+        android:key="volume_panel_expandable"
+        android:title="@string/volume_panel_expandable_title"
+        android:summary="@string/volume_panel_expandable_summary"
+        android:defaultValue="true"
+        android:order="-52"/>
+
     <!-- Dial pad tones -->
     <SwitchPreferenceCompat
         android:key="dial_pad_tones"

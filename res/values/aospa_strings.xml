@@ -10,4 +10,8 @@
     <string name="app_volume_title">Per-app volume control</string>
     <string name="app_volume_summary">Allow to set different volume levels for each app</string>
 
+    <!-- volume panel control -->
+    <string name="volume_panel_expandable_title">Expandable Volume Rows</string>
+    <string name="volume_panel_expandable_summary">Expand the volume rows instead of displaying the volume bottom sheet.</string>
+
 </resources>
