@@ -265,4 +265,10 @@
         android:fragment="com.android.settings.notification.SoundWorkSettings"
         android:order="100"
         settings:controller="com.android.settings.notification.WorkSoundsPreferenceController"/>
+
+    <co.aospa.framework.preference.SystemSettingSwitchPreference
+        android:key="grant_all_audio_focus"
+        android:title="@string/grant_all_audio_focus_title"
+        android:summary="@string/grant_all_audio_focus_summary"
+        android:defaultValue="true" />
 </PreferenceScreen>

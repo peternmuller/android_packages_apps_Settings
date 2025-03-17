@@ -21,4 +21,8 @@
     <!-- Summary of the lock screen auto pin confirm setting. [CHAR LIMIT=NONE] -->
     <string name="lock_screen_auto_pin_confirm_summary">Unlock automatically if you input a correct PIN of 4 digits or more. This is slightly less secure than tapping Enter to confirm.</string>
 
+    <!-- Grant audio focus to any apps -->
+    <string name="grant_all_audio_focus_title">Grant audio focus to any apps</string>
+    <string name="grant_all_audio_focus_summary">Allow audio to be played even during call</string>
+
 </resources>
