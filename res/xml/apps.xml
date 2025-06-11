@@ -99,6 +99,13 @@
             android:value="com.android.settings.Settings$AppBatteryUsageActivity"/>
     </Preference>
 
+    <com.android.settings.applications.KeyboxDataPreference
+        android:key="keybox_data_setting"
+        android:title="@string/keybox_data_title"
+        android:order="19"
+        android:summary="@string/keybox_data_summary"
+        android:defaultValue=""/>
+
     <Preference
         android:key="special_access"
         android:fragment="com.android.settings.applications.specialaccess.SpecialAccessSettings"
