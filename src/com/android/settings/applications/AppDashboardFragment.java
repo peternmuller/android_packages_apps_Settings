@@ -52,6 +52,9 @@ public class AppDashboardFragment extends DashboardFragment {
     private static final String KEYBOX_DATA_KEY = "keybox_data_setting";
     private ActivityResultLauncher<Intent> mKeyboxFilePickerLauncher;
     private KeyboxDataPreference mKeyboxDataPreference;
+    private static final String PIF_DATA_KEY = "pif_data_setting";
+    private ActivityResultLauncher<Intent> mPifFilePickerLauncher;
+    private PifDataPreference mPifDataPreference;
     private AppsPreferenceController mAppsPreferenceController;
 
     private static List<AbstractPreferenceController> buildPreferenceControllers(Context context) {
@@ -111,6 +114,19 @@ public class AppDashboardFragment extends DashboardFragment {
                 }
             }
         );
+
+        mPifFilePickerLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == Activity.RESULT_OK && result.getData() != null) {
+                    Uri uri = result.getData().getData();
+                    Preference pref = findPreference(PIF_DATA_KEY);
+                    if (pref instanceof PifDataPreference) {
+                        ((PifDataPreference) pref).handleFileSelected(uri);
+                    }
+                }
+            }
+        );
     }
 
     @Override
@@ -120,6 +136,11 @@ public class AppDashboardFragment extends DashboardFragment {
         mKeyboxDataPreference = findPreference(KEYBOX_DATA_KEY);
         if (mKeyboxDataPreference != null) {
             mKeyboxDataPreference.setFilePickerLauncher(mKeyboxFilePickerLauncher);
+        }
+    
+        mPifDataPreference = findPreference(PIF_DATA_KEY);
+        if (mPifDataPreference != null) {
+            mPifDataPreference.setFilePickerLauncher(mPifFilePickerLauncher);
         }
     }
 

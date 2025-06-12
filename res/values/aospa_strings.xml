@@ -29,4 +29,8 @@
     <string name="keybox_data_title">Select keybox XML</string>
     <string name="keybox_data_summary">Used for key attestation emulation for all apps system wide. Click the delete button to reset the keybox data values used by the system.</string>
 
+    <!-- Pif Data -->
+    <string name="pif_data_title">Select pif.json to spoof</string>
+    <string name="pif_data_summary">For props spoofing of gms process</string>
+
 </resources>
