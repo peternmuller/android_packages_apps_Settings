@@ -89,7 +89,7 @@
 
     <Preference
         android:key="app_battery_usage"
-        android:order="17"
+        android:order="16"
         android:title="@string/app_battery_usage_title"
         android:summary="@string/app_battery_usage_summary"
         settings:controller="com.android.settings.applications.AppBatteryUsagePreferenceController"
@@ -102,8 +102,15 @@
     <com.android.settings.applications.KeyboxDataPreference
         android:key="keybox_data_setting"
         android:title="@string/keybox_data_title"
-        android:order="19"
+        android:order="17"
         android:summary="@string/keybox_data_summary"
+        android:defaultValue=""/>
+
+    <com.android.settings.applications.PifDataPreference
+        android:key="pif_data_setting"
+        android:title="@string/pif_data_title"
+        android:order="18"
+        android:summary="@string/pif_data_summary"
         android:defaultValue=""/>
 
     <Preference
@@ -111,12 +118,6 @@
         android:fragment="com.android.settings.applications.specialaccess.SpecialAccessSettings"
         android:title="@string/special_access"
         android:order="20"/>
-
-    <com.android.settings.applications.PifDataPreference
-        android:key="pif_data_setting"
-        android:title="@string/pif_data_title"
-        android:summary="@string/pif_data_summary"
-        android:defaultValue=""/>
 
     <PreferenceCategory
         android:key="advanced_category"

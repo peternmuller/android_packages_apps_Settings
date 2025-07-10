@@ -59,7 +59,7 @@ public class PifDataPreference extends Preference {
         deleteButton.setOnClickListener(v -> {
             Settings.Secure.putString(getContext().getContentResolver(),
                     Settings.Secure.PIF_DATA, null);
-            Toast.makeText(getContext(), "json data cleared", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "JSON data cleared", Toast.LENGTH_SHORT).show();
             callChangeListener(null);
         });
     }
@@ -85,12 +85,12 @@ public class PifDataPreference extends Preference {
 
             Settings.Secure.putString(getContext().getContentResolver(),
                     Settings.Secure.PIF_DATA, json);
-            Toast.makeText(getContext(), "json file loaded", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "JSON file loaded", Toast.LENGTH_SHORT).show();
             callChangeListener(json);
 
         } catch (IOException e) {
             Log.e(TAG, "Failed to read json file", e);
-            Toast.makeText(getContext(), "Failed to read json", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Failed to read JSON", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -35,9 +35,9 @@
         android:id="@+id/delete_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_delete"
+        android:src="@drawable/ic_trash_can"
         android:background="?android:attr/selectableItemBackgroundBorderless"
-        android:tint="?android:colorControlNormal"
-        android:contentDescription="@string/delete"
-        android:layout_marginStart="8dp" />
+        android:scaleType="centerInside"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp" />
 </LinearLayout>
