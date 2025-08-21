@@ -1,5 +1,6 @@
 package com.android.settings.applications;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -61,6 +62,8 @@ public class PifDataPreference extends Preference {
                     Settings.Secure.PIF_DATA, null);
             Toast.makeText(getContext(), "JSON data cleared", Toast.LENGTH_SHORT).show();
             callChangeListener(null);
+
+            killPackages();
         });
     }
 
@@ -88,9 +91,25 @@ public class PifDataPreference extends Preference {
             Toast.makeText(getContext(), "JSON file loaded", Toast.LENGTH_SHORT).show();
             callChangeListener(json);
 
+            killPackages();
         } catch (IOException e) {
             Log.e(TAG, "Failed to read json file", e);
             Toast.makeText(getContext(), "Failed to read JSON", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void killPackages() {
+        try {
+            ActivityManager am = (ActivityManager) getContext().getSystemService(Context.ACTIVITY_SERVICE);
+            String[] packages = { "com.google.android.gms", "com.android.vending" };
+            for (String pkg : packages) {
+                am.getClass()
+                  .getMethod("forceStopPackage", String.class)
+                  .invoke(am, pkg);
+                Log.i(TAG, pkg + " process killed");
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to kill packages", e);
         }
     }
 }
